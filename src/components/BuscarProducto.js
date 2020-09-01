@@ -1,37 +1,43 @@
 import React, { useState } from 'react'
-import axios from 'axios' ;
+import PropTypes from 'prop-types';
+import styled from '@emotion/styled';
 
-//import PropTypes from 'prop-types';
+const ContenedorImg = styled.img`
+    width: 152px; 
+    height: 35px; 
+    margin-top: 12px; 
+    margin-bottom: 6px;
+`;
 
-export const BuscarProducto = ( search ) => {
+const ContenedorFondo = styled.div`
+    background-color: rgb(0, 113, 206);
+    font-size: 8pt;
+    color: #fff;
+`;
 
-    
-    const busca =  async () => {
-        console.log('jjajaja');
-        const url = 'https://demo-servidor.herokuapp.com/api/auth?search=pelota';
-        const resultado = await axios.get(url);
-        console.log('RES==>',resultado);
-    };
+export const BuscarProducto = ( { setProductos } ) => {
 
-    let inputValue = "";
+    const [inputValue, setInputValue] = useState('');
+
+    const handleInputChange = (e) => {
+        setInputValue( e.target.value );
+    }
+
     const handleSubmit = (e) =>{
-        console.log('goooooooooo');
         e.preventDefault();
 
         if( inputValue.trim().length > 0 ){
-            //buscamos
-            //setProductos(  prods => [ inputValue ]);
-            //setInputValue('');
-
+            setProductos(  prods => [ inputValue ]);
+            setInputValue('');
         }
         
     }
 
     return (
-            <div className="col-xs-8">
+            <ContenedorFondo className="col-xs-8">
             <div className="logo">
                 <a href="/catalogo/">                    
-                    <img alt="Lider Logo" src="https://www.lider.cl/catalogo/images/lider-logo.svg"/>
+                    <ContenedorImg alt="Lider Logo" src="https://www.lider.cl/catalogo/images/lider-logo.svg"/>
                 </a>
             </div>        
             <div>
@@ -40,16 +46,21 @@ export const BuscarProducto = ( search ) => {
                 <div className="col-md-4">
                     <input
                         name="search"
+                        value={ inputValue }
                         className="form-control"
-                        type="button"
+                        type="text"
                         placeholder="Buscar por Producto"
-                        onClick={busca}
+                        onChange={handleInputChange}
                     />
                 </div>
 
             </div>
         </form>
         </div>
-        </div>            
+        </ContenedorFondo>            
     )
+}
+
+BuscarProducto.propTypes = {
+    setProductos: PropTypes.func.isRequired
 }
