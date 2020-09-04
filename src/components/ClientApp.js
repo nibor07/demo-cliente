@@ -4,16 +4,20 @@ import Header from './Header';
 import { ListaProductos } from './ListaProductos';
 
 export const ClientApp = () => {
-
+    const style = {
+        textAlign: "center",
+        backgroundColor: "rgb(0, 113, 206)"
+      };
     const [productos, setProductos] = useState([]);
 
     console.log( 'URL: ', process.env.REACT_APP_BACKEND_URL);
     return (
         <div>
+        <div className='rows'  style={style}>
             <Header />
             <BuscarProducto setProductos={ setProductos }/>
             <hr />
-            <ol>
+        </div>
             {
                     productos.map( producto  => (
                         <ListaProductos 
@@ -21,8 +25,7 @@ export const ClientApp = () => {
                             producto={ producto }
                         />
                     ))
-            }
-            </ol>     
-        </div>
+            } 
+        </div>       
     )
 }

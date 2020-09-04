@@ -3,39 +3,41 @@ import React from 'react'
 export const Producto = ({ producto }) => {
 
     let imagen = "https://"+producto.url;
+
+    const styleMarca = {
+        fontWeight: "bold",
+        color: "rgb(0, 0, 0)"
+    };
     
-    return (        
-        <div className="col-md-4 mb-5">
-            <div className="card">                 
+    return (
 
-                 <img className="card-img-top" src={imagen} alt={imagen} />
-                 <h1 className="card-header" >{producto.brand} <span className="description"> {producto.description}</span></h1>
+        <div className="columns is-mobile">
+            <div className="column is-1"></div>
+            <div className="column is-2">
+                <article className="tile is-child box">
+                    <p className="title"><img className="card-img-top" src={imagen} alt={imagen} /></p>
+                    <div className="linea-separacion"></div>
+                    <div className="rows">
+                        <span style={styleMarca}>{producto.brand}</span> <span>{producto.description}</span>
 
-                 { 
-                    producto.isDescuento ? 
-                    <div>
-                         <div> {producto.price}  </div> {producto.precioConDescuento}
-                         <div> {producto.price}  </div>
-                    </div> :
-                    <div>
-                        <p> {producto.price}  </p> 
-                        <p> {producto.price} </p>
-                   </div> 
+                        { 
+                            producto.isDescuento ? 
+                            <div>
+                                <div className="precio">{producto.precioConDescuento} <span className="porcentaje-descuento">&nbsp; 50%</span></div>
+                                <div className="row precio-referencia">{producto.price}</div>
+                            </div> :
+                            <div>
+                                <div> {producto.price}  </div> 
+                            </div>
+                        }
 
-                 }
-                 <div className="card-body">
-                     <button
-                        type="button"
-                        className="btn btn-block btn-light"
-                        onClick={() => {
-                        }}
-                     >
-                         Agregar
-                     </button>
-
-                 </div>
+                        <br></br>
+                        <div className="btn-centrado">
+                            <button className="button is-rounded"> &nbsp;&nbsp;Agregar &nbsp;&nbsp;</button>
+                        </div>
+                    </div>
+                </article>
             </div>
         </div>
-
     )
 }

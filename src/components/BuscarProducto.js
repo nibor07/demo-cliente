@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
+import lidercategoria from '../img/lider-categoria.jpg'; 
+import shop from '../img/compra.jpg';
 
 const ContenedorImg = styled.img`
     width: 152px; 
@@ -15,7 +17,22 @@ const ContenedorFondo = styled.div`
     color: #fff;
 `;
 
-export const BuscarProducto = ( { setProductos } ) => {
+const style = {
+    textAlign: "center",
+    height: "35px",
+    marginTop: "10px",
+    zIndex: 5,
+    backgroundColor: "rgb(0, 113, 206)"
+  };
+
+  const styleLogos = {
+    textAlign: "center",
+    height: "45px",
+    marginTop: "1px",
+    zIndex: 6
+  };
+
+  export const BuscarProducto = ( { setProductos } ) => {
 
     const [inputValue, setInputValue] = useState('');
 
@@ -34,30 +51,26 @@ export const BuscarProducto = ( { setProductos } ) => {
     }
 
     return (
-            <ContenedorFondo className="col-xs-8">
-            <div className="logo">
-                <a href="/catalogo/">                    
-                    <ContenedorImg alt="Lider Logo" src="https://www.lider.cl/catalogo/images/lider-logo.svg"/>
-                </a>
-            </div>        
-            <div>
-            <form className="col-12" onSubmit={ handleSubmit }>
-            <div className="row mt-4">
-                <div className="col-md-4">
-                    <input
-                        name="search"
-                        value={ inputValue }
-                        className="form-control"
-                        type="text"
-                        placeholder="Buscar por Producto"
-                        onChange={handleInputChange}
-                    />
-                </div>
-
+        <div className='row is-full' style={style}> 
+        <div className="columns is-vcentered" style={styleLogos}>
+            <div className="column is-3"><img src={lidercategoria} /> </div>
+            <div className="column is-6 is-narrow">
+                <form className="col-12" onSubmit={ handleSubmit }>
+                    <div className="col-md-4">
+                        <input
+                            name="search"
+                            value={ inputValue }
+                            className="input is-rounded"
+                            type="text"
+                            placeholder="¿Qué estás buscando?"
+                            onChange={handleInputChange}
+                        />
+                    </div>
+                </form>
             </div>
-        </form>
+            <div className="column is-3" align="right"><img src={shop} /></div>
         </div>
-        </ContenedorFondo>            
+        </div>
     )
 }
 

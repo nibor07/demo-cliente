@@ -29,6 +29,11 @@ input {
   width: 100%;
 }
 
+span {
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+}
+
 .card-grid {
   display: flex;
   flex-direction: row;
@@ -56,4 +61,112 @@ input {
 .description {
   color: blue;
 
+}
+.sin-resultado {
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 30px;
+  padding-top: 10px;
+  border-radius: 4px;
+  padding: 15px 15px 0px;
+  color: rgb(66, 66, 66);
+  margin: 10px 5px 25px 10px;
+  font-size: 12px;
+  box-shadow: 
+}
+
+.mensaje-resultado{
+  font-weight: bold;
+  color: rgb(4, 30, 66);
+  font-size: 30px;
+  height: 50px;
+}
+
+.mensaje-sin-dato{
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(0, 113, 206);
+}
+
+.linea{
+  width: 100px;
+  height: 5px;
+  background: rgb(255, 194, 32);
+  margin: 15px auto;
+}
+
+@media(max-width:768px)
+.cFwMqv {
+    font-size: 14px;
+}
+
+.cFwMqv {
+  font-size: 16px;
+  color: rgb(65, 64, 66);
+  padding: 0px 15px 20px;
+}
+
+.tips {
+  font-weight: bolder;
+}
+
+@media (min-width: 768px)
+.walmart-sales-price {
+    font-size: 20px;
+}
+
+.walmart-sales-price {
+    font-size: 18px;
+    color: #565656;
+    font-weight: 700;
+}
+
+.descuento{
+  margin-top: 1px; 
+  margin-left: 6px;
+}
+
+@media (min-width: 768px)
+.precio {
+    font-size: 20px;
+}
+.precio{
+  font-size: 18px;
+  color: #565656;
+  font-weight: 700;
+}
+.precio-referencia{
+  font-size: 12px;
+  text-decoration: line-through;
+  color: #6d6e71;
+}
+.porcentaje-descuento{
+  width: 35px;
+  border-radius: 16px;
+  background-color: #de1c24;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+}
+
+.linea-separacion{
+  height: 2px;
+  background-color: rgb(230 229 225);
+  margin: 7px auto;
+}
+
+.margen-query {
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+.btn-centrado{
+  text-align:center;
+}
+
+.header{
+  font-size: 11px;
+  font-weight: 400;
+  text-align: left;
+  color: #fff;
 }
