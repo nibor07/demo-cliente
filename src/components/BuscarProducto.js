@@ -38,12 +38,12 @@ const style = {
     }
 
     return (
-        <div className='row is-full' style={style}> 
-        <div className="columns is-vcentered" style={styleLogos}>
-            <div className="column is-3"><img src={lidercategoria} alt="Seleccione las categorías" /> </div>
-            <div className="column is-6 is-narrow">
-                <form className="col-12" onSubmit={ handleSubmit }>
-                    <div className="col-md-4">
+        <div className='container'> 
+        <div className="row row-cols-4" style={styleLogos}>
+            <div className="col"><img src={lidercategoria} alt="Seleccione las categorías" /> </div>
+            <div className="col-6">
+                <form onSubmit={ handleSubmit }>
+                    <div>
                         <input
                             name="search"
                             value={ inputValue }
@@ -55,7 +55,7 @@ const style = {
                     </div>
                 </form>
             </div>
-            <div className="column is-3" align="right"><img src={shop} alt="Pagar"/></div>
+            <div className="col" align="right"><img src={shop} alt="Pagar"/></div>
         </div>
         </div>
     )

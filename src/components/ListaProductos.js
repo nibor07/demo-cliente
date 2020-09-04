@@ -18,27 +18,32 @@ const styleResultado = {
     //let query = producto;
     const { data:productos, loading } = useFetchProductos( producto );
     console.log('data=>', productos);
+
+    let imagen = "https://"+producto.url;
+
+    const styleMarca = {
+        fontWeight: "bold",
+        color: "rgb(0, 0, 0)"
+    };
+    
+    
     if(productos){
+        let totalFilas = productos.length / 5;
         return (
-            <>
-                <h2 className="margen-query"> Resultados para <span className="precio">{ producto }</span> </h2>
-
-                { loading && <p className="animate__animated animate__flash">Loading</p> }
-                
-                    
-                    {
-                        
-                        productos.map( producto => (
-                            <Producto
-                                key={ producto.id }
-                                producto={producto}
-                            />
-                        ))
-                        
-                    }
+            <div className="col-12 p-5 row">
+            {
+                productos.map( producto => (
+                    <Producto
+                        key={ producto.id }
+                        producto={producto}
+                    />
+                ))}
 
 
-            </>
+
+
+
+        </div>
         );
     }else{
         return(
