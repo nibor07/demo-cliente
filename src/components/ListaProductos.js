@@ -16,19 +16,12 @@ const styleResultado = {
   export const ListaProductos = ({ producto }) => {
 
     //let query = producto;
-    const { data:productos, loading } = useFetchProductos( producto );
+    const { data:productos } = useFetchProductos( producto );
     console.log('data=>', productos);
 
-    let imagen = "https://"+producto.url;
 
-    const styleMarca = {
-        fontWeight: "bold",
-        color: "rgb(0, 0, 0)"
-    };
-    
-    
     if(productos){
-        let totalFilas = productos.length / 5;
+        
         return (
             <div className="col-12 p-5 row">
             {
@@ -41,19 +34,17 @@ const styleResultado = {
 
 
 
-
-
         </div>
         );
     }else{
         return(
             <div>
             <div className="rows sin-resultado is-5">
-                <div className="column is-centered" ><img src={loSentimos} style={styleLogo} alt="Lo sentimos!"/></div>
-                <div className="row is-vcentered mensaje-resultado">¡Lo sentimos!</div>
-                <div className="row is-vcentered mensaje-sin-dato" >No encontramos resultados para tu búsqueda de <span>"{producto}" </span></div>
-                <div className="row is-vcentered linea"></div>
-                <div className="row is-vcentered cFwMqv" style={styleResultado}><spam className="tips">Algunos tips:</spam> Revisa si escribiste correctamente lo que buscas. Puedes probar nuevamente usando términos menos específicos.</div>
+                <div className="btn-centrado" ><img src={loSentimos} style={styleLogo} alt="Lo sentimos!"/></div>
+                <div className="btn-centrado mensaje-resultado">¡Lo sentimos!</div>
+                <div className="btn-centrado mensaje-sin-dato" >No encontramos resultados para tu búsqueda de <span>"{producto}" </span></div>
+                <div className="btn-centrado linea"></div>
+                <div className="btn-centrado cFwMqv" style={styleResultado}><spam className="tips">Algunos tips:</spam> Revisa si escribiste correctamente lo que buscas. Puedes probar nuevamente usando términos menos específicos.</div>
             </div>
             </div>
         )

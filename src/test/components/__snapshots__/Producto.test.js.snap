@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests de <Producto /> debe mostrar el componente correctamente 1`] = `
+<div
+  className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4"
+>
+  <div
+    className="card"
+  >
+    <img
+      alt="https://wwww.lider.cl/1.jpg"
+      className="card-img-top"
+      src="https://wwww.lider.cl/1.jpg"
+    />
+    <div
+      className="card-body"
+    >
+      <p
+        className="card-text"
+      >
+        <span
+          style={
+            Object {
+              "color": "rgb(0, 0, 0)",
+              "fontWeight": "bold",
+            }
+          }
+        >
+          Televisor DAEWOO
+        </span>
+         
+        <span>
+          jausau
+        </span>
+      </p>
+      <p
+        className="card-text precio"
+      >
+        $23.421
+         
+        <span
+          className="porcentaje-descuento"
+        >
+            50%
+        </span>
+      </p>
+      <p
+        className="card-text precio-referencia"
+      >
+        $123
+      </p>
+    </div>
+    <div
+      className="card-footer"
+    >
+      <a
+        className="btn btn-outline-primary"
+        href="https://wwww.lider.cl/1.jpg"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Agregar
+      </a>
+    </div>
+  </div>
+</div>
+`;

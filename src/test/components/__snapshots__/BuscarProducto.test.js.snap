@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <BuscarProducto /> debe de mostrarse correctamente 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="row row-cols-4"
+    style={
+      Object {
+        "height": "45px",
+        "marginTop": "1px",
+        "textAlign": "center",
+        "zIndex": 6,
+      }
+    }
+  >
+    <div
+      className="col"
+    >
+      <img
+        alt="Seleccione las categorías"
+        src="lider-categoria.jpg"
+      />
+       
+    </div>
+    <div
+      className="col-6"
+    >
+      <form
+        onSubmit={[Function]}
+      >
+        <div>
+          <input
+            className="input is-rounded"
+            name="search"
+            onChange={[Function]}
+            placeholder="¿Qué estás buscando?"
+            type="text"
+            value=""
+          />
+        </div>
+      </form>
+    </div>
+    <div
+      align="right"
+      className="col"
+    >
+      <img
+        alt="Pagar"
+        src="compra.jpg"
+      />
+    </div>
+  </div>
+</div>
+`;

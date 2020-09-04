@@ -11,6 +11,15 @@
 		},
 		{
 			"path": "..\\..\\..\\..\\react_pixabay-master"
+		},
+		{
+			"path": "..\\..\\..\\..\\react-hero-app-0.16.0"
+		},
+		{
+			"path": "..\\..\\..\\..\\test-mocha-chai-1.0.0"
+		},
+		{
+			"path": "..\\..\\..\\..\\express-mongo-master"
 		}
 	],
 	"settings": {}

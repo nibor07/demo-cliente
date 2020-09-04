@@ -3,19 +3,10 @@ import PropTypes from 'prop-types';
 import lidercategoria from '../img/lider-categoria.jpg'; 
 import shop from '../img/compra.jpg';
 
-
-const style = {
+  const styleLogos = {
     textAlign: "center",
     height: "35px",
     marginTop: "10px",
-    zIndex: 5,
-    backgroundColor: "rgb(0, 113, 206)"
-  };
-
-  const styleLogos = {
-    textAlign: "center",
-    height: "45px",
-    marginTop: "1px",
     zIndex: 6
   };
 

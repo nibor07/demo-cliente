@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <ClientApp /> debe mostrar una lista vacia de productos 1`] = `
+<div>
+  <div
+    className="rows"
+    style={
+      Object {
+        "backgroundColor": "rgb(0, 113, 206)",
+        "textAlign": "center",
+      }
+    }
+  >
+    <Header />
+    <BuscarProducto
+      setProductos={[Function]}
+    />
+    <hr />
+  </div>
+</div>
+`;
+
+exports[`Pruebas en <ClientApp /> debe mostrarse correctamente 1`] = `
+<div>
+  <div
+    className="rows"
+    style={
+      Object {
+        "backgroundColor": "rgb(0, 113, 206)",
+        "textAlign": "center",
+      }
+    }
+  >
+    <Header />
+    <BuscarProducto
+      setProductos={[Function]}
+    />
+    <hr />
+  </div>
+</div>
+`;

@@ -20,7 +20,7 @@ const style = {
 
 const Header = () => {
     return(
-        <div class="container-full">
+        <div className="container-full">
             <div className="row rows-cols-8" style={style}>
                 <div className= "col-8">
                     <span className="header" background-color="#041e42">Servicio al cliente de Lider.cl: WhatsApp 

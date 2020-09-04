@@ -1,4 +1,5 @@
 import React from 'react'
+const formato = require('../util/utilConvert.js');
 
 export const Producto = ({ producto }) => {
 
@@ -17,13 +18,13 @@ export const Producto = ({ producto }) => {
                 <div className="card-body">
                     <p className="card-text"><span style={styleMarca}>{producto.brand}</span> <span>{producto.description}</span></p>
                     
-                    <p className="card-text precio">{producto.precioConDescuento} <span className="porcentaje-descuento">&nbsp; 50%</span></p>
-                    <p className="card-text precio-referencia">{producto.price} Vistas</p>
+                    <p className="card-text precio">{formato.numberFormat(producto.precioConDescuento)} <span className="porcentaje-descuento">&nbsp; 50%</span></p>
+                    <p className="card-text precio-referencia">{formato.numberFormat(producto.price)}</p>
                 </div>
                 :
                 <div className="card-body">
                     <p className="card-text"><span style={styleMarca}>{producto.brand}</span> <span>{producto.description}</span></p>
-                    <p className="card-text precio">{producto.price} Vistas</p>
+                    <p className="card-text precio">{formato.numberFormat(producto.price)}</p>
                 </div>
             }
                 <div className="card-footer">

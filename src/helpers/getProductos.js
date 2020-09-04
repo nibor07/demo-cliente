@@ -6,8 +6,6 @@ export const getProductos = async( producto ) => {
     console.log("PR==>producto: ", producto);
 
     try {
-        //busqueda
-        //let data = {search: producto};
         const respuesta = await clienteAxios.get('/api/search', {
             params: {
                     query: producto

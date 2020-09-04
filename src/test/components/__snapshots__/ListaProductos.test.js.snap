@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en el <ListaProductos /> debe mostrarse correctamente 1`] = `
+<div
+  className="col-12 p-5 row"
+/>
+`;
