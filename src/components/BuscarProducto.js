@@ -1,21 +1,8 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types';
-import styled from '@emotion/styled';
 import lidercategoria from '../img/lider-categoria.jpg'; 
 import shop from '../img/compra.jpg';
 
-const ContenedorImg = styled.img`
-    width: 152px; 
-    height: 35px; 
-    margin-top: 12px; 
-    margin-bottom: 6px;
-`;
-
-const ContenedorFondo = styled.div`
-    background-color: rgb(0, 113, 206);
-    font-size: 8pt;
-    color: #fff;
-`;
 
 const style = {
     textAlign: "center",
@@ -53,7 +40,7 @@ const style = {
     return (
         <div className='row is-full' style={style}> 
         <div className="columns is-vcentered" style={styleLogos}>
-            <div className="column is-3"><img src={lidercategoria} /> </div>
+            <div className="column is-3"><img src={lidercategoria} alt="Seleccione las categorías" /> </div>
             <div className="column is-6 is-narrow">
                 <form className="col-12" onSubmit={ handleSubmit }>
                     <div className="col-md-4">
@@ -68,7 +55,7 @@ const style = {
                     </div>
                 </form>
             </div>
-            <div className="column is-3" align="right"><img src={shop} /></div>
+            <div className="column is-3" align="right"><img src={shop} alt="Pagar"/></div>
         </div>
         </div>
     )

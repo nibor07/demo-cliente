@@ -1,7 +1,5 @@
-import React, { Fragment } from 'react';
-import styled from '@emotion/styled';
+import React from 'react';
 import agenda from '../img/agenda_icon.svg';
-import locales from '../img/locales_icon.svg';
 
 
 const style = {
